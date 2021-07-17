@@ -1,0 +1,76 @@
+body {
+    background-color: #000;
+  }
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+#landing-header h1 {
+  color: #fff;
+  font-size: 50px;
+}
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(https://www.rd.com/wp-content/uploads/2016/09/01-deficient-things-happen-body-fruits-vegetables-AbbieImages.jpg);
+}
+.slideshow li:nth-child(2) {
+  background-image: url( http://media3.s-nbcnews.com/i/newscms/2017_17/1210660/healthy-fruit-today-170427-tease_4b23a22240a5cc620f93df196b731233.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://2.bp.blogspot.com/-PTuBB4biPQs/TmR3o2J0i7I/AAAAAAAAAEQ/jtkHtrY6qPU/s1600/1.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_704,w_1254,x_0,y_66/f_auto,q_auto,w_1100/v1555271838/shape/mentalfloss/istock-512628566.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://policygenius-blog.imgix.net/2018/05/fruits-vegetables.jpg);
+  animation-delay: 40s; 
+}
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

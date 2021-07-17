@@ -1,0 +1,43 @@
+<%- include("partials/header") %>
+
+<div id="inquiry-form" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Info</h3>
+            <p>You can post your inquiry at this form and we will answer it as soon as possible</p>
+            <p>You can also check the frequently asked questions if they matches yours.</p>
+        </div>
+        <div class="col-md-8">
+            <h1>Post Your Question</h1>
+            <form action="/inquiry" method="POST">
+                <h3>Inquiry</h3>
+                <div class="form-group holders">
+                    <label for="question">Question</label>
+                    <input name="question" type="text" required>
+                </div>
+                <div class="form-group holders">
+                    <label for="Profession">Profession</label>
+                  <input name="Profession" type="text" required>
+              </div>
+                <div class="form-group">
+                    <label for="Description">Description</label><br>
+                    <textarea name="Description"></textarea>
+                </div>
+                  <button class="btn btn-lg btn-outline-info" type="submit">Submit</button>
+            </form>
+            <div>
+                <h1>Frequently Asked Questions</h1>
+                <hr>
+                <p><strong>1. Where I could find the method to establish a nursery?</strong></p>
+                <p>You can checkout our management section.</p>
+            </div>
+            <div>
+                <h1>Contacts</h1>
+                <hr>
+               <p>For any query you can contact to particular department</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
